@@ -20,7 +20,10 @@ $("input:text").keypress(function (event) {
         //clear the input
         $(this).val("");
         //add to the ul
-        $("ul").append("<li><span>X</span> " + newTodo + "</li>");
-        
+        $("ul").append("<li><span><i class='fas fa-trash'></i></span> " + newTodo + "</li>");
     };
+});
+
+$("h1 span").on("click", function(){
+    $("input:text").fadeToggle();
 });
